@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Lazy Job Finder",
+  "version": "1.0",
+  "description": "Automatically scrolls LinkedIn Jobs and saves relevant jobs",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://www.linkedin.com/jobs/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/jobs/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
